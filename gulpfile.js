@@ -7,8 +7,8 @@ var gulp = require('gulp'),
 	pug = require('gulp-pug'),
 	//prefix = require('gulp-autoprefixer'),
 	sass = require('gulp-sass'),
-	browserSync = require('browser-sync');
-
+	browserSync = require('browser-sync'),
+    htmlbeautify = require('gulp-html-beautify');
 /*
 * Change directories here
 */
@@ -23,13 +23,31 @@ var settings = {
  * matching file name. index.pug - index.pug.json
  */
 gulp.task('pug', function () {
-	return gulp.src(settings.pugDir + '/**/*.pug')
+	var options = {
+        indent_size: 2
+    };
+    
+    return gulp.src(settings.pugDir + '/**/*.pug')
 //		.pipe(data(function (file) {
 //			return require('./_data/' + path.basename(file.path) + '.json');
 //		}))
 		.pipe(pug())
+        .pipe(htmlbeautify(options))
 		.pipe(gulp.dest(settings.buildDir));
 });
+
+/** 
+ * Beautify _build HTML files 
+ */
+//gulp.task('htmlbeautify', function() {
+//  var options = {
+//    {indentSize: 2}
+//  };
+//  gulp.src(settings.buildDir + '/**/*.html')
+//    .pipe(htmlbeautify(options))
+//    .pipe(gulp.dest(settings.buildDir + '/'))
+//});
+
 
 /**
  * Recompile .pug files and live reload the browser
