@@ -7,6 +7,30 @@ $light-gray: #EEEEEE;
 $medium-gray: #9B9B9B;
 $accent: #9013FE;
 
+@keyframes rotate-right {
+    0% {
+        transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(2deg);;
+    }
+    100% {
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+    }
+}
+
+@keyframes rotate-left {
+    0% {
+        transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(-1deg);;
+    }
+    100% {
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+    }
+}
+
 html {
     font-size: 62.5%;
 }
@@ -25,10 +49,62 @@ body {
 }
 
 #top {
+    position: relative;
+    overflow: hidden;
+    //max-width: 1080px;
+    margin: 0 auto;
     
     img {
         max-width: 100%;
-       min-height: 80px;
+        min-height: 80px;
+    }
+    
+    img.shapes {
+        visibility: hidden;
+    }
+    
+    img.shape {
+        position: absolute;
+        left: 0;
+        top: -30px;
+        width: 100%;
+        min-height: 110px;
+    
+        /* Standard syntax */
+        animation-name: rotate-right;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(.46, .52, .52, .57);
+    }
+    
+    img#shape1 {
+        transform-origin: 10% 50%;
+        animation-name: rotate-left;
+        animation-duration: 4.5s;
+    }
+    
+    img#shape2 {
+        transform-origin: 20% 50%;
+    }
+    
+    img#shape3 {
+        transform-origin: 40% 50%;
+        animation-name: rotate-left;
+        animation-duration: 4.5s;
+    }
+    
+    img#shape4 {
+        transform-origin: 60% 50%;
+    }
+    
+    img#shape5 {
+        transform-origin: 75% 50%;
+        animation-name: rotate-left;
+        animation-duration: 4.5s;
+    }
+    
+    img#shape6 {
+        transform-origin: 90% 50%;
     }
 }
 
