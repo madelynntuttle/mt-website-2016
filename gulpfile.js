@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 var settings = {
 	buildDir: '_build',
 	sassDir: '_assets/styles',
+    imgDir: '_assets/images',
     pugDir: '_templates'
 };
 
@@ -44,17 +45,6 @@ gulp.task('pug-rebuild', ['pug'], function () {
 });
 
 /**
- * Wait for pug and sass tasks, then launch the browser-sync server
- */
-gulp.task('browser-sync', ['sass', 'pug'], function () {
-	browserSync.init({
-		server: {
-            baseDir: settings.buildDir,  
-        }
-	});
-});
-
-/**
  * Compile .scss files into public css directory With autoprefixer no
  * need for vendor prefixes then live reload the browser.
  */
@@ -71,11 +61,33 @@ gulp.task('sass', function () {
 });
 
 /**
+ * Copy images to build directory
+ */
+gulp.task('images', function () {
+	return gulp.src(settings.imgDir + '/**/*')
+		.pipe(gulp.dest(settings.buildDir + '/assets/images'))
+		.pipe(browserSync.reload({stream: true}));
+});
+
+
+/**
+ * Wait for pug and sass tasks, then launch the browser-sync server
+ */
+gulp.task('browser-sync', ['sass', 'images', 'pug'], function () {
+	browserSync.init({
+		server: {
+            baseDir: settings.buildDir,  
+        }
+	});
+});
+
+/**
  * Watch scss files for changes & recompile
+ * Watch image files for changes & recompile
  * Watch .pug files run pug-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
-	gulp.watch(settings.sassDir + '/**', ['sass']);
+	gulp.watch(settings.sassDir + '/**', ['sass']);        gulp.watch(settings.imgDir + '/**', ['images']);
 	gulp.watch(settings.pugDir + '/**', ['pug-rebuild']);
 });
 
