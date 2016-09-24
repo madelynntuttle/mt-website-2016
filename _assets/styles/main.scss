@@ -1,3 +1,100 @@
-body {
-    font-family: Helvetica, sans-serif;
+$w: #fefefe;
+$c: #00EBE3;
+$m: #FF0094;
+$y: #FFFF00;
+$k: #2d2d2d;
+$light-gray: #EEEEEE;
+$medium-gray: #9B9B9B;
+$accent: #9013FE;
+
+html {
+    font-size: 62.5%;
 }
+
+body {
+    margin: 0;
+    font-family: 'Avenir Next W01', Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: $k;
+}
+
+#top {
+    
+    img {
+        max-width: 100%;
+        min-height: 80px;
+    }
+}
+
+#content, #footer {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+}
+
+#content {
+    #logo {
+        margin: 80px auto 80px;
+        width: 60%;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    h1 {
+        font-size: 5.4rem;
+        line-height: 1;
+        font-weight: normal;
+        font-family: 'Pompiere', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 1.8rem;
+        margin-bottom: 80px;
+        
+    }
+    
+    a {
+        color: $accent;
+        text-decoration: none;
+        padding: 5px 0 0;
+        
+        &:hover, &:active {
+            background: $accent;
+            color: $w;
+        }
+    }
+}
+
+#footer {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+    #content, #footer {
+        max-width: 1080px;
+    }
+
+    #content {
+        #logo {
+            max-width: 200px;
+            margin: 80px auto 80px;
+        }
+        
+        h1 {
+            font-size: 7.2rem;
+        }
+        
+        p {
+            font-size: 2.4rem;
+        }
+    }
+}
+
