@@ -18,13 +18,17 @@ body {
     font-size: 1.6rem;
     line-height: 1.75;
     color: $k;
+    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 #top {
     
     img {
         max-width: 100%;
-        min-height: 80px;
+       min-height: 80px;
     }
 }
 
@@ -35,6 +39,8 @@ body {
 }
 
 #content {
+    flex: 1;
+    
     #logo {
         margin: 80px auto 80px;
         width: 60%;
@@ -75,12 +81,10 @@ body {
     font-size: 1.4rem;
     font-weight: 800;
     text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-    #content, #footer {
-        max-width: 1080px;
-    }
 
     #content {
         #logo {
