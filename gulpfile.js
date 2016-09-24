@@ -16,6 +16,7 @@ var settings = {
 	buildDir: '_build',
 	sassDir: '_assets/styles',
     imgDir: '_assets/images',
+    scriptsDir: '_assets/scripts',
     pugDir: '_templates'
 };
 
@@ -69,11 +70,20 @@ gulp.task('images', function () {
 		.pipe(browserSync.reload({stream: true}));
 });
 
+/**
+ * Copy scripts to build directory
+ */
+gulp.task('scripts', function () {
+	return gulp.src(settings.scriptsDir + '/**/*')
+		.pipe(gulp.dest(settings.buildDir + '/assets/scripts'))
+		.pipe(browserSync.reload({stream: true}));
+});
+
 
 /**
  * Wait for pug and sass tasks, then launch the browser-sync server
  */
-gulp.task('browser-sync', ['sass', 'images', 'pug'], function () {
+gulp.task('browser-sync', ['sass', 'images', 'scripts', 'pug'], function () {
 	browserSync.init({
 		server: {
             baseDir: settings.buildDir,  
@@ -88,6 +98,7 @@ gulp.task('browser-sync', ['sass', 'images', 'pug'], function () {
  */
 gulp.task('watch', function () {
 	gulp.watch(settings.sassDir + '/**', ['sass']);        gulp.watch(settings.imgDir + '/**', ['images']);
+    gulp.watch(settings.scriptsDir + '/**', ['scripts']);
 	gulp.watch(settings.pugDir + '/**', ['pug-rebuild']);
 });
 
