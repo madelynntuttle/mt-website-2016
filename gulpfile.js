@@ -7,7 +7,6 @@ var gulp = require('gulp'),
 	pug = require('gulp-pug'),
 	prefix = require('gulp-autoprefixer'),
 	sass = require('gulp-sass'),
-//    connect = require('gulp-connect'),
 	browserSync = require('browser-sync').create(),
     htmlbeautify = require('gulp-html-beautify');
 /*
@@ -36,19 +35,6 @@ gulp.task('pug', function () {
         .pipe(htmlbeautify(options))
 		.pipe(gulp.dest(settings.buildDir));
 });
-
-/** 
- * Beautify _build HTML files 
- */
-//gulp.task('htmlbeautify', function() {
-//  var options = {
-//    {indentSize: 2}
-//  };
-//  gulp.src(settings.buildDir + '/**/*.html')
-//    .pipe(htmlbeautify(options))
-//    .pipe(gulp.dest(settings.buildDir + '/'))
-//});
-
 
 /**
  * Recompile .pug files and live reload the browser
@@ -83,17 +69,6 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest(settings.buildDir + '/assets/styles'))
 		.pipe(browserSync.reload({stream: true}));
 });
-
-/**
- * Watch scss files for changes & recompile
- * Watch .pug files run pug-rebuild then reload BrowserSync
- */
-//gulp.task('webserver', function () {
-//	connect.server({
-//        port: 3000,
-//        root: settings.buildDir
-//    });
-//});
 
 /**
  * Watch scss files for changes & recompile
