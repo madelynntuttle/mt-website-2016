@@ -5,9 +5,10 @@ var gulp = require('gulp'),
 	path = require('path'),
 	data = require('gulp-data'),
 	pug = require('gulp-pug'),
-	//prefix = require('gulp-autoprefixer'),
+	prefix = require('gulp-autoprefixer'),
 	sass = require('gulp-sass'),
-	browserSync = require('browser-sync'),
+//    connect = require('gulp-connect'),
+	browserSync = require('browser-sync').create(),
     htmlbeautify = require('gulp-html-beautify');
 /*
 * Change directories here
@@ -57,14 +58,13 @@ gulp.task('pug-rebuild', ['pug'], function () {
 });
 
 /**
- * Wait for pug and sass tasks, then launch the browser-sync Server
+ * Wait for pug and sass tasks, then launch the browser-sync server
  */
 gulp.task('browser-sync', ['sass', 'pug'], function () {
-	browserSync({
+	browserSync.init({
 		server: {
-			baseDir: settings.buildDir
-		},
-		notify: false
+            baseDir: settings.buildDir,  
+        }
 	});
 });
 
@@ -83,6 +83,17 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest(settings.buildDir + '/assets/styles'))
 		.pipe(browserSync.reload({stream: true}));
 });
+
+/**
+ * Watch scss files for changes & recompile
+ * Watch .pug files run pug-rebuild then reload BrowserSync
+ */
+//gulp.task('webserver', function () {
+//	connect.server({
+//        port: 3000,
+//        root: settings.buildDir
+//    });
+//});
 
 /**
  * Watch scss files for changes & recompile
