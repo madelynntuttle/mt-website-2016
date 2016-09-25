@@ -1,3 +1,5 @@
+/* ----- Global Variables ----- */
+/* colors */
 $w: #fefefe;
 $c: #00EBE3;
 $m: #FF0094;
@@ -6,7 +8,38 @@ $k: #2d2d2d;
 $light-gray: #EEEEEE;
 $medium-gray: #9B9B9B;
 $accent: #9013FE;
+/* fonts */
+$main-font: 'Avenir Next W01', 'Avenir Next', Helvetica, sans-serif;
+$accent-font: 'Pompiere', sans-serif;
 
+
+/* ----- Animation Keyframs ----- */
+/* shapes wobble */
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rotate-right {
+    0% {
+        transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(2deg);;
+    }
+    100% {
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+    }
+}
+@-webkit-keyframes rotate-left {
+    0% {
+        transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(-1deg);;
+    }
+    100% {
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+    }
+}
+
+/* Standard syntax */ 
 @keyframes rotate-right {
     0% {
         transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
@@ -18,7 +51,6 @@ $accent: #9013FE;
         transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
     }
 }
-
 @keyframes rotate-left {
     0% {
         transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
@@ -31,18 +63,22 @@ $accent: #9013FE;
     }
 }
 
+/* ----------------------------------------------
+** ----- All Styles (Mobile-First Approach) ----- 
+** ----------------------------------------------*/
 html {
     font-size: 62.5%;
 }
 
 body {
     margin: 0;
-    font-family: 'Avenir Next W01', Helvetica, sans-serif;
+    font-family: $main-font;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.75;
     color: $k;
     
+    /* sticky footer */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -51,7 +87,6 @@ body {
 #top {
     position: relative;
     overflow: hidden;
-    //max-width: 1080px;
     margin: 0 auto;
     
     img {
@@ -59,6 +94,7 @@ body {
         min-height: 80px;
     }
     
+    /* establish vertical space with hidden img*/
     img.shapes {
         visibility: hidden;
     }
@@ -70,40 +106,67 @@ body {
         width: 100%;
         min-height: 110px;
     
-        /* Standard syntax */
+        /* wobble webkit annimation - rotate-right */
+        -webkit-animation-name: rotate-right;
+        -webkit-animation-duration: 8s;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-animation-timing-function: linear; 
+        
+        /* wobble regular annimation  - rotate-right */
         animation-name: rotate-right;
-        animation-duration: 4s;
+        animation-duration: 8s;
         animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(.46, .52, .52, .57);
+        // animation-timing-function: cubic-bezier(.46, .52, .52, .57);  
+        animation-timing-function: linear;
+
+        
+        .left {
+            /* wobble webkit annimation  - rotate-left */
+            -webkit-animation-name: rotate-left;
+            -webkit-animation-duration: 4s;
+            
+            /* wobble regular annimation  - rotate-left */
+            animation-name: rotate-left;
+            animation-duration: 4s;
+        }
     }
     
+    /* adjust transform-orgin for each shape image */
     img#shape1 {
+        -ms-transform-origin: 10% 50%; /* IE 9 */
+        -webkit-transform-origin: 10% 50%; /* Chrome, Safari, Opera */
         transform-origin: 10% 50%;
-        animation-name: rotate-left;
-        animation-duration: 4.5s;
+        -webkit-animation-duration: 6s; /* Chrome, Safari, Opera */
+        animation-duration: 6s;
     }
     
     img#shape2 {
+        -ms-transform-origin: 20% 50%; /* IE 9 */
+        -webkit-transform-origin: 20% 50%; /* Chrome, Safari, Opera */
         transform-origin: 20% 50%;
     }
     
     img#shape3 {
+        -ms-transform-origin: 40% 50%; /* IE 9 */
+        -webkit-transform-origin: 40% 50%; /* Chrome, Safari, Opera */
         transform-origin: 40% 50%;
-        animation-name: rotate-left;
-        animation-duration: 4.5s;
     }
     
     img#shape4 {
+        -ms-transform-origin: 60% 50%; /* IE 9 */
+        -webkit-transform-origin: 60% 50%; /* Chrome, Safari, Opera */
         transform-origin: 60% 50%;
     }
     
     img#shape5 {
+        -ms-transform-origin: 75% 50%; /* IE 9 */
+        -webkit-transform-origin: 75% 50%; /* Chrome, Safari, Opera */
         transform-origin: 75% 50%;
-        animation-name: rotate-left;
-        animation-duration: 4.5s;
     }
     
     img#shape6 {
+        -ms-transform-origin: 90% 50%; /* IE 9 */
+        -webkit-transform-origin: 90% 50%; /* Chrome, Safari, Opera */
         transform-origin: 90% 50%;
     }
 }
@@ -115,6 +178,7 @@ body {
 }
 
 #content {
+    /* sticky footer */
     flex: 1;
     
     #logo-container {
@@ -130,7 +194,7 @@ body {
         font-size: 5.4rem;
         line-height: 1;
         font-weight: normal;
-        font-family: 'Pompiere', sans-serif;
+        font-family: $accent-font;
         text-transform: uppercase;
         margin-bottom: 20px;
     }
@@ -160,6 +224,9 @@ body {
     margin-bottom: 20px;
 }
 
+/* ----------------------------------------------
+** ----- Desktop Styles ----- 
+** ----------------------------------------------*/
 @media only screen and (min-width: 768px) {
 
     #content {
