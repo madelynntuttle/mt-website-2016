@@ -2,6 +2,7 @@
 @import "vendor/pure/grids-responsive";
 
 @import "_settings";
+@import "_components/_globals";
 @import "_components/_header";
 
 
@@ -67,7 +68,7 @@ html {
 body {
     margin: 0;
     font-family: $main-font;
-    font-weight: 500;
+    font-weight: $main-font-normal;
     font-size: 1.6rem;
     line-height: 1.75;
     color: $k;
@@ -213,7 +214,7 @@ body {
 
 #footer {
     font-size: 1.4rem;
-    font-weight: 800;
+    font-weight: $main-font-bold;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
