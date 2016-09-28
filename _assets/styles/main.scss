@@ -2,21 +2,10 @@
 @import "vendor/pure/_grids-responsive-min";
 @import "vendor/pure/_menus-min";
 
+@import "_settings";
 @import "_components/_header";
 
-/* ----- Global Variables ----- */
-/* colors */
-$w: #fefefe;
-$c: #00EBE3;
-$m: #FF0094;
-$y: #FFFF00;
-$k: #2d2d2d;
-$light-gray: #EEEEEE;
-$medium-gray: #9B9B9B;
-$accent: #9013FE;
-/* fonts */
-$main-font: 'Avenir Next W01', 'Avenir Next', Helvetica, sans-serif;
-$accent-font: 'Pompiere', sans-serif;
+
 
 
 /* ----- Animation Keyframs ----- */
