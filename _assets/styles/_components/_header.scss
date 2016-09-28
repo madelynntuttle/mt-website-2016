@@ -1,16 +1,38 @@
-.custom-wrapper {
-    background-color: #ffd390;
-    -webkit-font-smoothing: antialiased;
-    height: 2.1em;
+#menu {
+    background-color: $w;
+    height: 8rem;
     overflow: hidden;
     -webkit-transition: height 0.5s;
     -moz-transition: height 0.5s;
     -ms-transition: height 0.5s;
     transition: height 0.5s;
+    text-align: center;
 }
 
-.custom-wrapper.open {
-    height: 14em;
+#menu.open {
+    height: 20em;
+}
+
+ #branding-outer {
+    padding-top: 160px;
+}
+
+#branding {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    text-align: center;
+}
+
+.custom-brand {
+    max-width: 120px;
+    padding: 2rem 0;
+    display: inline-block;
+}
+
+.custom-brand img {
 }
 
 .custom-toggle {
@@ -59,6 +81,7 @@
     transform: rotate(-45deg);
 }
 
+/* Desktop */
 @media (max-width: 47.999em) {
 
     .custom-toggle {
