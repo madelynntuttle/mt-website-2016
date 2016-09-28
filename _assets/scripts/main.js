@@ -1,27 +1,38 @@
-(function () {
-    var logoFiles = ["/assets/images/logo1.png", 
-                     "/assets/images/logo2.png", 
-                     "/assets/images/logo3.png", 
-                     "/assets/images/logo4.png", 
-                     "/assets/images/logo5.png", 
-                     "/assets/images/logo6.png", 
-                     "/assets/images/logo7.png", 
-                     "/assets/images/logo8.png", 
-                     "/assets/images/logo9.png", 
-                     "/assets/images/logo10.png"];
+(function (window, document) {
+var menu = document.getElementById('menu'),
+    WINDOW_CHANGE_EVENT = ('onorientationchange' in window) ? 'orientationchange':'resize';
 
-    var randomNumberPrev = 0;
-
-    var logoTimer = function () {
-        var randomNumber = Math.floor(Math.random() * 10); 
-        if (randomNumber === randomNumberPrev) {
-            randomNumber = (randomNumber + 1) % 10;
+function toggleHorizontal() {
+    [].forEach.call(
+        document.getElementById('menu').querySelectorAll('.custom-can-transform'),
+        function(el){
+            el.classList.toggle('pure-menu-horizontal');
         }
-        var t = logoFiles[randomNumber];
+    );
+};
 
-        document.getElementById("logo").src = t;
-        randomNumberPrev = randomNumber;
-    };
+function toggleMenu() {
+    // set timeout so that the panel has a chance to roll up
+    // before the menu switches states
+    if (menu.classList.contains('open')) {
+        setTimeout(toggleHorizontal, 500);
+    }
+    else {
+        toggleHorizontal();
+    }
+    menu.classList.toggle('open');
+    document.getElementById('toggle').classList.toggle('x');
+};
 
-    var changeLogo = setInterval(logoTimer, 1000);
-})(document);
+function closeMenu() {
+    if (menu.classList.contains('open')) {
+        toggleMenu();
+    }
+}
+
+document.getElementById('toggle').addEventListener('click', function (e) {
+    toggleMenu();
+});
+
+window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
+})(this, this.document);
