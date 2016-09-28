@@ -1,4 +1,5 @@
-@import "normalize";
+@import "vendor/pure/_base-min";
+@import "vendor/pure/_grids-responsive-min";
 
 /* ----- Global Variables ----- */
 /* colors */
@@ -23,10 +24,10 @@ $accent-font: 'Pompiere', sans-serif;
         transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
     }
     50% {
-        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(2deg);;
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(2deg);
     }
     100% {
-        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);
     }
 }
 @-webkit-keyframes rotate-left {
@@ -34,10 +35,10 @@ $accent-font: 'Pompiere', sans-serif;
         transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
     }
     50% {
-        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(-1deg);;
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(-1deg);
     }
     100% {
-        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);
     }
 }
 
@@ -47,10 +48,10 @@ $accent-font: 'Pompiere', sans-serif;
         transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
     }
     50% {
-        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(2deg);;
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(2deg);
     }
     100% {
-        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);
     }
 }
 @keyframes rotate-left {
@@ -58,10 +59,10 @@ $accent-font: 'Pompiere', sans-serif;
         transform: rotate(0deg) translateX(1.5px) rotate(0deg) rotate(0deg);
     }
     50% {
-        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(-1deg);;
+        transform: rotate(180deg) translateX(1.5px) rotate(-180deg) rotate(-1deg);
     }
     100% {
-        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);;
+        transform: rotate(360deg) translateX(1.5px) rotate(-360deg) rotate(0deg);
     }
 }
 
