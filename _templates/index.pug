@@ -1,19 +1,7 @@
 doctype html
 html
-    head
-        meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        title UI/UX Designer & Web Consultant &mdash; Madelynn Tuttle
-        // pure.css responsive grid for ie 8 added as a conditional
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-        <![endif]-->
-        link(href='/assets/styles/main.css', rel='stylesheet')
-        // Fonts.com Avenier Next font
-        link(href='//fast.fonts.net/cssapi/25d46fcf-158e-4d50-9851-aee033672aa3.css', rel='stylesheet')
-        // Google's Pompiere font
-        link(href='https://fonts.googleapis.com/css?family=Pompiere', rel='stylesheet')
-
-    body
+    include _includes/_head.pug
+    body    
         #top
             img.shapes(src='/assets/images/shapes-v2.png')
             img#shape1.shape.left(src='/assets/images/shape1.png')
@@ -22,7 +10,7 @@ html
             img#shape4.shape(src='/assets/images/shape4.png')
             img#shape5.shape.left(src='/assets/images/shape5.png')
             img#shape6.shape(src='/assets/images/shape6.png')
-        
+
         #content
             #logo-container
                 img#logo(src='/assets/images/mt-logo-2016.png')
@@ -30,8 +18,8 @@ html
             p.
                 Can't wait? View my resume on #[a(href='http://linkedin.com/in/madelynntuttle') LinkedIn] and my work on #[a(href='https://www.behance.net/madelynntuttle') Behance]!
             .push
-        
+
         footer#footer
             p Madelynn Tuttle
-            
+
         script(src='/assets/scripts/main.js')
