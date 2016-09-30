@@ -96,7 +96,9 @@
 }
 
 
-/* Tablet and Up */
+/* ----------------------------------------------
+** ----- Tablet and Up Styles ----- 
+** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
 
     #branding-outer {
@@ -125,7 +127,4 @@
     .pure-menu-link:hover {
         background-color: transparent;
     }
-    
-    
-
 }

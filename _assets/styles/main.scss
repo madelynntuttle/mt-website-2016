@@ -6,6 +6,8 @@
 @import "_components/_header";
 @import "_components/_footer";
 
+@import "_pages/index";
+
 
 
 
@@ -62,18 +64,7 @@
 /* ----------------------------------------------
 ** ----- All Styles (Mobile-First Approach) ----- 
 ** ----------------------------------------------*/
-html {
-    font-size: 62.5%;
-}
 
-body {
-    margin: 0;
-    font-family: $main-font;
-    font-weight: $main-font-normal;
-    font-size: 1.6rem;
-    line-height: 1.75;
-    color: $k;
-}
 
 #top {
     position: relative;

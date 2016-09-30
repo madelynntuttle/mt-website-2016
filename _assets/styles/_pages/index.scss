@@ -1,0 +1,59 @@
+/* Typography */
+h2 {
+    font-family: $accent-font;
+    //font-weight: $accent-font-bold;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 4.8rem;
+    line-height: 1;
+    margin: 8rem 0;
+}
+
+.intro p {
+    font-size: 2.4rem;
+    line-height: 2;
+}
+
+a.more {
+    font-family: $accent-font2;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4rem 0 8rem;
+    
+    &:hover {
+        color: $accent;
+    }
+}
+
+/* Sections */
+.intro {
+    h2 {
+        font-size: 7.2rem;
+        color: $c;
+    }
+    
+    a {
+        color: $c;
+    }
+}
+
+.projects {
+    background-color: $m;
+    text-align: center;
+    margin-bottom: 4rem;
+    
+    h2 {
+        color: $w;
+    }
+    
+    a {
+        color: $w;
+    }
+}
+
+.contact {
+    background-color: $light-gray;
+    text-align: center;  
+}
