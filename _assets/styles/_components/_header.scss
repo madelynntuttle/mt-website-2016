@@ -1,5 +1,8 @@
-#menu {
+#header {
     background-color: $w;
+}
+
+#menu {
     height: 8rem;
     overflow: hidden;
     -webkit-transition: height 0.5s;
@@ -10,10 +13,10 @@
 }
 
 #menu.open {
-    height: 20em;
+    height: 19em;
 }
 
- #branding-outer {
+#branding-outer {
     padding-top: 160px;
 }
 
@@ -32,9 +35,6 @@
     display: inline-block;
 }
 
-.custom-brand img {
-}
-
 .custom-toggle {
     width: 34px;
     height: 34px;
@@ -42,7 +42,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    display: none;
+    display: block;
 }
 
 .custom-toggle .bar {
@@ -81,11 +81,51 @@
     transform: rotate(-45deg);
 }
 
-/* Desktop */
-@media (max-width: 47.999em) {
-
-    .custom-toggle {
-        display: block;
+.pure-menu-link {
+    font-family: $main-font;
+    font-weight: $main-font-bold;
+    font-size: $nav-size;
+    letter-spacing: $main-font-ls-open;
+    text-transform: uppercase;
+    color: $k;
+    padding: .625em 1em;
+    
+    &:hover {
+        color: $accent;
     }
+}
+
+
+/* Tablet and Up */
+@media screen and (min-width: 48em) {
+
+    #branding-outer {
+        padding-top: 0px;
+    }
+    
+    #branding {
+        position: static;
+        text-align: left;
+    }
+    
+    .custom-brand {
+        position: absolute;
+        z-index: 10;
+    }
+    
+    .custom-toggle {
+        display: none;
+    }
+    
+    .pure-menu-horizontal {
+        text-align: right;
+        margin-top: 2rem;
+    }
+    
+    .pure-menu-link:hover {
+        background-color: transparent;
+    }
+    
+    
 
 }
