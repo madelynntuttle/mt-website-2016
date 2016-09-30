@@ -1,0 +1,25 @@
+#footer {
+    height: 8rem;
+    background-color: $k;
+    color: $w;
+    font-size: $footer-size;
+    font-weight: $main-font-bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    
+    p {
+        margin: 0;
+        display: inline;
+    }
+    
+    span {
+        @include vertical-align();
+    }
+    
+    img {
+        padding: 0 3rem;
+        max-width: 5rem;
+        @include vertical-align();
+    }
+}

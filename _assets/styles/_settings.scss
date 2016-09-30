@@ -19,3 +19,14 @@ $main-font-ls-open: .125rem;
 $accent-font: 'Pompiere', sans-serif;
 
 $nav-size: 1.4rem;
+$footer-size: 1rem;
+
+/* ----- Global Mixins ----- */
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%);
+}

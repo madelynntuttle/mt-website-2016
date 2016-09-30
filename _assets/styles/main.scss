@@ -4,6 +4,7 @@
 @import "_settings";
 @import "_components/_globals";
 @import "_components/_header";
+@import "_components/_footer";
 
 
 
@@ -72,11 +73,6 @@ body {
     font-size: 1.6rem;
     line-height: 1.75;
     color: $k;
-    
-    /* sticky footer */
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
 }
 
 #top {
@@ -210,13 +206,6 @@ body {
             color: $w;
         }
     }
-}
-
-#footer {
-    font-size: 1.4rem;
-    font-weight: $main-font-bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
 }
 
 /* ----------------------------------------------
