@@ -162,39 +162,7 @@ body {
     }
 }
 
-#content, #footer {
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
-}
-
 #content {
-    /* sticky footer */
-    flex: 1;
-    
-    #logo-container {
-        margin: 80px auto 80px;
-        width: 60%;
-        
-        img {
-            width: 100%;
-        }
-    }
-
-    h1 {
-        font-size: 5.4rem;
-        line-height: 1;
-        font-weight: normal;
-        font-family: $accent-font;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
-    
-    p {
-        font-size: 1.8rem;
-        margin-bottom: 80px;
-        
-    }
     
     a {
         color: $accent;
