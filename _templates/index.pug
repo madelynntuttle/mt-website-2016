@@ -2,7 +2,7 @@ doctype html
 html
     include _includes/_head.pug
     body    
-        #header
+        header#header
             #menu.pure-g.layout
                 #branding-outer.pure-u-1.pure-u-md-1-6
                     #branding.pure-menu
@@ -21,23 +21,59 @@ html
                             li.pure-menu-item
                                 a.pure-menu-link(href='#') Contact
                                 
-        
-        #top
-            img.shapes(src='/assets/images/shapes-v2.png')
-            img#shape1.shape.left(src='/assets/images/shape1.png')
-            img#shape2.shape(src='/assets/images/shape2.png')            
-            img#shape3.shape.left(src='/assets/images/shape3.png')
-            img#shape4.shape(src='/assets/images/shape4.png')
-            img#shape5.shape.left(src='/assets/images/shape5.png')
-            img#shape6.shape(src='/assets/images/shape6.png')
-
-        #content
-            h1 Under Construction
-            p.
-                Can't wait? View my resume on #[a(href='http://linkedin.com/in/madelynntuttle') LinkedIn] and my work on #[a(href='https://www.behance.net/madelynntuttle') Behance]!
-            .push
+        main#main
+            .page-header
+                .content-container.pure-g.layout
+                    p Bringing the pieces together through [focused] design.
+                #shapes-container
+                    //
+                        img.shapes(src='/assets/images/shapes-v2.png')
+                        img#shape1.shape.left(src='/assets/images/shape1.png')
+                        img#shape2.shape(src='/assets/images/shape2.png')            
+                        img#shape3.shape.left(src='/assets/images/shape3.png')
+                        img#shape4.shape(src='/assets/images/shape4.png')
+                        img#shape5.shape.left(src='/assets/images/shape5.png')
+                        img#shape6.shape(src='/assets/images/shape6.png')
+            .page-content
+                .intro.pure-g.layout
+                    .pure-u-1.pure-u-md-7-12
+                        h2 Hello!
+                        p My name is Madelynn Tuttle. I am a goal-oriented, ambitious, UI/UX designer from the United States. I’m currently based in beautiful Japan, but I’m headed back State-side this Fall.
+                        a.more(href='/about') More About Me
+                    .pure-u-1.pure-u-md-5-12
+                        img.circle(src='/assets/images/#')
+                .projects.pure-g.layout
+                    .pure-u-1.pure-u-md-1
+                        h2 Selected Projects
+                    .pure-u-1.pure-u-md-1-3
+                        a.featured(href='#'): img(src='/assets/images/#')
+                    .pure-u-1.pure-u-md-1-3
+                        a.featured(href='#'): img(src='/assets/images/#')
+                    .pure-u-1.pure-u-md-1-3
+                        a.featured(href='#'): img(src='/assets/images/#')
+                    .pure-u-1.pure-u-md-1
+                        a.more(href='/about') More Projects
+                .contact.pure-g.layout
+                    .pure-u-1.pure-u-md-1
+                        h2 Contact
+                    .pure-u-1.pure-u-md-1
+                        a.email(href='mailto:hello@madelynntuttle.com', target='_blank')
+                    #map
+                        .overlay
+                            img#map-shape1.shape(src='/assets/images/#')
+                        .japan.pure-u-1.pure-u-md-1-2
+                            p.strong Now
+                            p.location Tokyo, Japan
+                            img(src='/assets/images/#')
+                        .usa.pure-u-1.pure-u-md-1-2
+                            p.strong Fall 2016
+                            p.location Jacksonville, Florida, USA
+                            img(src='/assets/images/#')
 
         footer#footer
-            p Madelynn Tuttle
+            p.
+                Madelynn Tuttle
+                #[img#logo-footer(src='/assets/images/#')]
+                Copyright 2016
 
         script(src='/assets/scripts/main.js')
