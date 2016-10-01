@@ -1,7 +1,7 @@
 #pre-footer {
     background: $accent;
     margin-top: -8rem;
-    padding: ($base-space*3) $base-space ($base-space*2);
+    padding: ($base-space*3) 0 ($base-space*2);
     
     /* clipped shape */
     -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
@@ -14,6 +14,7 @@
         font-size: 2.4rem;
         line-height: 1.125;
         width: 50%;
+        margin-left: $base-space;
     }
 }
 
