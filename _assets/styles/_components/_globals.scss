@@ -14,16 +14,15 @@ body, .pure-g [class*="pure-u"] {
 /* Add gutters to grid system */
 .layout {
     width: 100%;
-    max-width: 96rem;
+    max-width: 92rem;
     margin: 0 auto;
 }
-
 
 .layout > div {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 /* ----------------------------------------------
@@ -32,5 +31,9 @@ body, .pure-g [class*="pure-u"] {
 @media screen and (min-width: 48em) {
     .layout {
        padding: 0 1rem;
+    }
+    
+    .layout > div {
+        padding: 0 1rem;
     }
 }
