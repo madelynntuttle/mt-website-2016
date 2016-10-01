@@ -42,6 +42,7 @@ a {
     font-size: 4.8rem;
     line-height: 1;
     margin: 0;
+    padding: ($base-space*4) $base-space ($base-space*2);
 }
 
 .page-content h2 {
@@ -87,6 +88,17 @@ a.more {
     
     .tablet {
         display: block;
+    }
+    
+    .page-title h1 {
+        font-size: 7.2rem;
+        margin: 0 0 0 16rem;
+        padding: ($base-space*4) $base-space ($base-space*3);
+    }
+    
+    .page-content h2 {
+        font-size: 4.8rem;
+        margin: ($base-space*2) 0 ($base-space*1);
     }
 
 }

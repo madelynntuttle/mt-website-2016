@@ -22,10 +22,6 @@
         border-left: 1024px solid #ec3504;
         border-right: 0 solid transparent;
         */
-        
-        .content {
-            padding: ($base-space*4) $base-space ($base-space*2);
-        }
     }
     
     .content-container {
@@ -33,14 +29,21 @@
 
         div {
             background: transparent;
-            color: $w;
-            font-size: 2rem;
-            line-height: 2.7rem;
-            letter-spacing: .5px;
-            font-weight: $main-font-bold;
             text-align: center;
-            margin: $base-space auto;
-            max-width: 28rem;
+        }
+        
+        .right-brain {
+            width: 50%;
+            float: right;
+        }
+        
+        .left-brain {
+            width: 50%;
+            float: left;
+        }
+        
+        .look-around {
+            clear: both;
         }
     }
 }
@@ -54,4 +57,10 @@
             color: $c;
         }
     }
+}
+
+/* ----------------------------------------------
+** ----- Tablet and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 48em) {
 }
