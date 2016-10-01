@@ -49,6 +49,13 @@
 ** ----- Tablet and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
+    #pre-footer {
+        a.more {
+            width: 90%;
+            margin-right: $base-space;
+        }
+    }
+    
     #footer {
         img {
             padding: 0 3rem;
