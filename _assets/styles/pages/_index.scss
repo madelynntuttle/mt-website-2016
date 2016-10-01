@@ -121,19 +121,10 @@ a.more {
     }
 
     #map {
-        position: relative; 
+        margin-bottom: $base-space*4;
+        background: url('/assets/images/map-mobile-700-full.gif') no-repeat bottom center;
+        min-height: 55rem;
         
-        .overlay {
-             position: absolute;
-             z-index: 10;
-             top:35%;
-             left: 60%;
-            
-            img {
-                width: 1
-            }
-        }
-
         p {
             margin: 0;
             font-size: 1.8rem;
@@ -149,21 +140,7 @@ a.more {
         }
         
         .japan {
-            margin-bottom: $base-space;
-            
-            img {
-                max-width: 60%;
-                margin: 0 auto;
-            }
-        }
-        
-        .usa {
-            margin-bottom: 4rem;
-            
-            img {
-                max-width: 95%;
-                margin: 0 auto;
-            }
+            margin-bottom: 20rem;
         }
     }
 }
@@ -230,6 +207,18 @@ a.more {
         
         .circle-container {
             margin-top: 17rem;
+        }
+    }
+    
+    .contact {    
+        #map {
+            background: transparent;
+            min-height: 0;
+            
+            .japan, .usa {
+                width: 49%;
+                margin-bottom: 0;
+            }
         }
     }
 }
