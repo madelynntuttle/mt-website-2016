@@ -1,0 +1,20 @@
+.about .page-header {
+    position: static;
+    margin-bottom: $base-space;
+    
+    .content-container {
+        position: static;
+
+        div {
+            background: transparent;
+            color: $w;
+            font-size: 2rem;
+            line-height: 2.7rem;
+            letter-spacing: .5px;
+            font-weight: $main-font-bold;
+            text-align: center;
+            margin: $base-space auto;
+            max-width: 28rem;
+        }
+    }
+}

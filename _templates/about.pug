@@ -1,0 +1,62 @@
+doctype html
+html
+    include _includes/_head.pug
+    body.about    
+        header#header
+            #menu.pure-g.layout
+                #branding-outer.pure-u-1.pure-u-md-1-6
+                    #branding.pure-menu
+                        a.pure-menu-heading.custom-brand(href='#')
+                            img.pure-img(src='/assets/images/mt-logo-2016.png')
+                        a#toggle.custom-toggle(href='#')
+                            s.bar
+                            s.bar
+                .pure-u-1.pure-u-md-5-6
+                    .pure-menu.pure-menu-horizontal.custom-can-transform
+                        ul.pure-menu-list
+                            li.pure-menu-item
+                                a.pure-menu-link.pure-menu-selected(href='#') About
+                            li.pure-menu-item
+                                a.pure-menu-link(href='#') Portfolio
+                            li.pure-menu-item
+                                a.pure-menu-link(href='#') Contact
+                                
+        main#main
+            .page-header
+                .page-title
+                        h1 About Me!
+                .content-container
+                    .right-brain
+                        img(src='/assets/images/right-brain.png')
+                    .left-brain
+                        img(src='/assets/images/left-brain.png')    
+                    .look-around
+                        img(src='/assets/images/look-around-me.png')
+            .page-content
+                .info.pure-g.layout
+                    .pure-u-1.info-single
+                        h2 Imaginative
+                        p Somthing here.
+                    .pure-u-1.info-single
+                        h2 Future-Focused
+                        p Somthing here.
+                    .pure-u-1.info-single
+                        h2 UX Design / Responsive Design
+                        p Somthing here.
+                    .pure-u-1.info-single
+                        h2 Adobe & Sketch
+                        p Somthing here.
+                    .pure-u-1.info-single
+                        h2 Planned & Precise
+                        p Somthing here.
+                    .pure-u-1.info-single
+                        h2 HTML / CSS / JavaScript
+                        p Somthing here.
+                    .pure-u-1.info-single
+                        h2 English / Japanese
+                        p Somthing here.
+        #pre-footer
+            .content-container
+                a.more(href='http://linkedin.com/in/madelynntuttle') View My Resume on LinkedIn
+                    
+        include _includes/_footer.pug
