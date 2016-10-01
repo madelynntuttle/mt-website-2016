@@ -1,6 +1,6 @@
 .about .page-header {
     position: static;
-    margin-bottom: $base-space;
+    margin-bottom: 0;
     
     /* Page title */
     .page-title {
@@ -37,21 +37,12 @@
         div {
             background: transparent;
             text-align: center;
-            margin: 0;
-        }
-        
-        .right-brain {
-            width: 50%;
-            float: right;
-        }
-        
-        .left-brain {
-            width: 50%;
-            float: left;
+            //margin: 0;
         }
         
         .look-around {
-            clear: both;
+            max-width: 40rem;
+            margin: 0 auto;
         }
     }
 }
@@ -71,11 +62,30 @@
 ** ----- Tablet and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
-.page-title h1 {
-    font-size: 7.2rem;
-    margin: 0 0 0 16rem;
-    padding: 8rem 0 6rem;
-}
+    .page-title h1 {
+        font-size: 7.2rem;
+        margin: 0 0 0 16rem;
+        padding: 8rem 0 6rem;
+    }
+    .page-header .content-container {    
+        div {
+            margin: 0;
+        }
+        
+        .right-brain {
+            width: 50%;
+            float: right;
+        }
+
+        .left-brain {
+            width: 50%;
+            float: left;
+        }
+
+        .look-around {
+            clear: both;
+        }
+    }
 }
 
 /* ----------------------------------------------
