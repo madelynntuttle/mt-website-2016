@@ -4,9 +4,10 @@
     color: $w;
     font-size: $footer-size;
     font-weight: $main-font-bold;
-    letter-spacing: 1px;
+    letter-spacing: .5px;
     text-transform: uppercase;
     text-align: center;
+    padding: 0 1rem;
     
     p {
         margin: 0;
@@ -18,8 +19,19 @@
     }
     
     img {
-        padding: 0 3rem;
+        padding: 0 1rem;
         max-width: 5rem;
         @include vertical-align();
+    }
+}
+
+/* ----------------------------------------------
+** ----- Tablet and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 48em) {
+    #footer {
+        img {
+            padding: 0 3rem;
+        }        
     }
 }

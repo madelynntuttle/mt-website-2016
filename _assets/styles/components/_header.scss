@@ -46,14 +46,14 @@
 }
 
 .custom-toggle .bar {
-    background-color: #777;
+    background-color: $k;
     display: block;
     width: 20px;
-    height: 2px;
+    height: 3px;
     border-radius: 100px;
     position: absolute;
-    top: 18px;
-    right: 7px;
+    top: 4.25rem;
+    right: 1rem;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -122,6 +122,10 @@
     .pure-menu-horizontal {
         text-align: right;
         margin-top: 2rem;
+    }
+    
+    .pure-menu-item:last-child a {
+       padding-right: 0;
     }
     
     .pure-menu-link:hover {

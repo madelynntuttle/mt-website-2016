@@ -6,7 +6,7 @@ h2 {
     text-transform: uppercase;
     font-size: 4.8rem;
     line-height: 1;
-    margin: 8rem 0;
+    margin: ($base-space*4) 0 ($base-space*2);
 }
 
 .intro p {
@@ -19,7 +19,7 @@ a.more {
     font-size: 1.8rem;
     letter-spacing: 1px;
     display: inline-block;
-    margin: 4rem 0 8rem;
+    margin: $base-space 0 ($base-space*4);
     
     &:hover {
         color: $accent;
@@ -29,12 +29,12 @@ a.more {
 /* Shapes page-header */
 .page-header {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: $base-space;
     
     .content-container {
         position: absolute;
         z-index: 10;
-        top: 10rem;
+        top: 27%;
 
         div {
             background: $k;
@@ -44,13 +44,17 @@ a.more {
             letter-spacing: .5px;
             font-weight: $main-font-bold;
             text-align: center;
-            margin: 2rem;
+            margin: $base-space auto;
+            max-width: 28rem;
         }
+    }
+    
+    #shapes-container {
+        overflow: hidden; 
     }
     
     #shapes-container img.shapes {
         width: 200%;
-        overflow: hidden;
     }
 }
 
@@ -67,12 +71,10 @@ a.more {
     }
 }
 
-
-
 .projects {
     background-color: $m;
     text-align: center;
-    margin-bottom: 4rem;
+    //margin-bottom: 4rem; desktop
     
     h2 {
         color: $w;
@@ -115,7 +117,7 @@ a.more {
         font-weight: $main-font-bold;
         color: $k;
         display: block;
-        margin-bottom: 4rem;
+        margin-bottom: ($base-space*2);
     }
 
     #map {
@@ -130,10 +132,6 @@ a.more {
             img {
                 width: 1
             }
-            
-            .tablet {
-                display: none;
-            }
         }
 
         p {
@@ -146,12 +144,12 @@ a.more {
             }
 
             &.location {
-                margin-bottom: 2rem;
+                margin-bottom: $base-space;
             }
         }
         
         .japan {
-            margin-bottom: 2rem;
+            margin-bottom: $base-space;
             
             img {
                 max-width: 60%;
@@ -168,5 +166,79 @@ a.more {
             }
         }
     }
+}
 
+/* ----------------------------------------------
+** ----- Tablet and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 48em) {
+    /* Shapes page-header */
+    .page-header {
+        //margin-bottom: $base-space*2;
+
+        .content-container {
+            top: 8rem;
+
+            div {
+                font-size: 4rem;
+                line-height: 5.5rem;
+                max-width: 62rem;
+                margin: $base-space auto;
+                
+                p {
+                    margin: $base-space*2;
+                }
+            }
+        }
+
+        #shapes-container img.shapes {
+            width: 100%;
+        }
+        
+        /* #shapes-container {
+            position: relative;
+            max-height: 59rem;
+        
+            &:after {
+                content: " ";
+                display: block;
+                padding-top:60%;
+            }
+        }
+
+        #shapes-container img.shapes {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        } */
+    }
+    
+    /* Sections */
+    .intro {
+        h2 {
+            font-size: 7.2rem;
+            color: $c;
+        }
+
+        p {
+            margin-right: $base-space;
+        }
+        
+        a {
+            color: $c;
+        }
+        
+        .circle-container {
+            margin-top: 17rem;
+        }
+    }
+}
+
+/* ----------------------------------------------
+** ----- Desktop and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 64em) {
+    .projects {
+        margin-bottom: 4rem;
+    }
 }
