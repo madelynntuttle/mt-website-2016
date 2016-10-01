@@ -40,7 +40,8 @@ html
             .page-content
                 .intro.pure-g.layout                            
                     .pure-u-1.pure-u-md-5-12
-                        img.pure-img.circle(src='/assets/images/watermelon-me.png')
+                        .circle-container
+                            img.circle.pure-img(src='/assets/images/watermelon-me.png')
                     .pure-u-1.pure-u-md-7-12
                         h2 Hello!
                         p My name is Madelynn Tuttle. I am a goal-oriented, ambitious, UI/UX designer from the United States. I’m currently based in beautiful Japan, but I’m headed back State-side this Fall.
@@ -63,15 +64,15 @@ html
                         a.email(href='mailto:hello@madelynntuttle.com', target='_blank')
                     #map
                         .overlay
-                            img#map-shape1.shape(src='/assets/images/#')
+                            img#map-shape1.shape.pure-img(src='/assets/images/#')
                         .japan.pure-u-1.pure-u-md-1-2
                             p.strong Now
                             p.location Tokyo, Japan
-                            img(src='/assets/images/map-japan.png')
+                            img.pure-img(src='/assets/images/map-japan.png')
                         .usa.pure-u-1.pure-u-md-1-2
                             p.strong Fall 2016
                             p.location Jacksonville, Florida, USA
-                            img(src='/assets/images/map-usa.png')
+                            img.pure-img(src='/assets/images/map-usa.png')
 
         footer#footer
             p.

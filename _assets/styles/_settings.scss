@@ -26,6 +26,7 @@ $footer-size: 1rem;
 
 /* ----- Global Mixins ----- */
 
+/* vertically center items in container */
 @mixin vertical-align($position: relative) {
   position: $position;
   top: 50%;

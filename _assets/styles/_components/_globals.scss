@@ -25,6 +25,19 @@ body, .pure-g [class*="pure-u"] {
     padding: 0 2rem;
 }
 
+/* Circle img with black moving background */
+.circle-container {
+    border-radius: 50%;
+    max-width: 100%;
+    background: $k;
+    padding: 1rem;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 100%;
+}
+
 /* ----------------------------------------------
 ** ----- Tablet and Up Styles ----- 
 ** ----------------------------------------------*/
