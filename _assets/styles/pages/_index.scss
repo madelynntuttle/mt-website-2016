@@ -18,7 +18,6 @@ a.more {
     font-family: $accent-font2;
     font-size: 1.8rem;
     letter-spacing: 1px;
-    text-decoration: none;
     display: inline-block;
     margin: 4rem 0 8rem;
     
@@ -110,4 +109,64 @@ a.more {
 .contact {
     background-color: $light-gray;
     text-align: center;  
+    font-size: 1.8rem;
+    
+    a.email {
+        font-weight: $main-font-bold;
+        color: $k;
+        display: block;
+        margin-bottom: 4rem;
+    }
+
+    #map {
+        position: relative; 
+        
+        .overlay {
+             position: absolute;
+             z-index: 10;
+             top:35%;
+             left: 60%;
+            
+            img {
+                width: 1
+            }
+            
+            .tablet {
+                display: none;
+            }
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.8rem;
+
+            &.strong {
+                font-family: $accent-font2;
+                padding-bottom: 0;
+            }
+
+            &.location {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        .japan {
+            margin-bottom: 2rem;
+            
+            img {
+                max-width: 60%;
+                margin: 0 auto;
+            }
+        }
+        
+        .usa {
+            margin-bottom: 4rem;
+            
+            img {
+                max-width: 95%;
+                margin: 0 auto;
+            }
+        }
+    }
+
 }

@@ -11,6 +11,10 @@ body, .pure-g [class*="pure-u"] {
     color: $k;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Add gutters to grid system */
 .layout {
     width: 100%;
