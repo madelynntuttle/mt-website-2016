@@ -22,14 +22,22 @@
         border-left: 1024px solid #ec3504;
         border-right: 0 solid transparent;
         */
+    
+        .content {
+            max-width: 92rem;
+            margin: 0 auto;
+        }
     }
     
     .content-container {
         position: static;
+        max-width: 92rem;
+        margin: 0 auto;
 
         div {
             background: transparent;
             text-align: center;
+            margin: 0;
         }
         
         .right-brain {
@@ -63,4 +71,22 @@
 ** ----- Tablet and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
+.page-title h1 {
+    font-size: 7.2rem;
+    margin: 0 0 0 16rem;
+    padding: 8rem 0 6rem;
+}
+}
+
+/* ----------------------------------------------
+** ----- Desktop and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 64em) {
+    .my-info {
+        padding-top: 3rem;
+        
+        &.layout > div {
+            padding: 0 7rem;
+        }
+    }
 }
