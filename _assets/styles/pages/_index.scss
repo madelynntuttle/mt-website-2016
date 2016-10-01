@@ -27,6 +27,35 @@ a.more {
     }
 }
 
+/* Shapes page-header */
+.page-header {
+    position: relative;
+    margin-bottom: 2rem;
+    
+    .content-container {
+        position: absolute;
+        z-index: 10;
+        top: 10rem;
+
+        div {
+            background: $k;
+            color: $w;
+            font-size: 2rem;
+            line-height: 2.7rem;
+            letter-spacing: .5px;
+            font-weight: $main-font-bold;
+            text-align: center;
+            margin: 2rem;
+        }
+    }
+    
+    #shapes-container img.shapes {
+        width: 200%;
+        overflow: hidden;
+    }
+}
+
+
 /* Sections */
 .intro {
     h2 {

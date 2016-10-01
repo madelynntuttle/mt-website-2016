@@ -1,12 +1,12 @@
 @import "vendor/pure/pure";
 @import "vendor/pure/grids-responsive";
 
-@import "_settings";
-@import "_components/_globals";
-@import "_components/_header";
-@import "_components/_footer";
+@import "settings";
+@import "components/globals";
+@import "components/header";
+@import "components/footer";
 
-@import "_pages/index";
+@import "pages/index";
 
 
 
