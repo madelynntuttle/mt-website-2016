@@ -227,6 +227,47 @@ a.more {
 ** ----- Desktop and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 64em) {
+    .page-header .content-container {
+        top: 22%;
+        left: 0;
+        right: 0;
+    
+        div {
+            width: auto;
+        
+            p {
+                margin: 4rem;
+                max-width: 52rem;
+            }
+        }
+    }
+    
+    #shapes-container {
+            position: relative;
+            max-height: 59rem;
+        
+            &:after {
+                content: " ";
+                display: block;
+                padding-top:45%;
+            }
+        }
+
+        #shapes-container img.shapes {
+            position: absolute;
+            bottom: 0;
+        }
+    
+    .intro {        
+        p {
+            margin-right: 0;
+        }
+        
+        .circle-container {
+            margin-top: 7rem;
+        }
+    }
+    
     .projects {
         margin-bottom: 4rem;
     }
