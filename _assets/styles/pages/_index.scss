@@ -15,15 +15,7 @@ h2 {
 }
 
 a.more {
-    font-family: $accent-font2;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    display: inline-block;
     margin: $base-space 0 ($base-space*4);
-    
-    &:hover {
-        color: $accent;
-    }
 }
 
 /* Shapes page-header */

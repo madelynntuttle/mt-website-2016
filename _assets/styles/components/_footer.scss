@@ -1,3 +1,22 @@
+#pre-footer {
+    background: $accent;
+    margin-top: -8rem;
+    padding: ($base-space*3) $base-space ($base-space*2);
+    
+    /* clipped shape */
+    -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+    width: 100%;
+    
+    a.more {
+        color: $w;
+        margin: 0;
+        font-size: 2.4rem;
+        line-height: 1.125;
+        width: 50%;
+    }
+}
+
 #footer {
     height: 8rem;
     background-color: $k;

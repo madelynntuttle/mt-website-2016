@@ -2,6 +2,32 @@
     position: static;
     margin-bottom: $base-space;
     
+    /* Page title */
+    .page-title {
+        background: $c;
+        margin-bottom: $base-space*2;
+        
+        /* clipped shape */
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+        min-height: 18rem;
+        width: 100%;
+            
+        // border method
+        /*
+        height: 120px;
+        width: 100%;
+        border-top: 60px solid #ec3504;
+        border-bottom: 60px solid transparent;
+        border-left: 1024px solid #ec3504;
+        border-right: 0 solid transparent;
+        */
+        
+        .content {
+            padding: ($base-space*4) $base-space ($base-space*2);
+        }
+    }
+    
     .content-container {
         position: static;
 
@@ -15,6 +41,17 @@
             text-align: center;
             margin: $base-space auto;
             max-width: 28rem;
+        }
+    }
+}
+
+.about .page-content {
+    .my-info {
+        background: $light-gray;
+        padding-bottom: $base-space*6;
+        
+        h2 {
+            color: $c;
         }
     }
 }
