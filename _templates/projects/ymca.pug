@@ -1,0 +1,59 @@
+doctype html
+html
+    include ../_includes/_head.pug
+    body.projects.project-single    
+        header#header
+            #menu.pure-g.layout
+                #branding-outer.pure-u-1.pure-u-md-1-6
+                    #branding.pure-menu
+                        a.pure-menu-heading.custom-brand(href='#')
+                            img.pure-img(src='/assets/images/mt-logo-2016.png')
+                        a#toggle.custom-toggle(href='#')
+                            s.bar
+                            s.bar
+                .pure-u-1.pure-u-md-5-6
+                    .pure-menu.pure-menu-horizontal.custom-can-transform
+                        ul.pure-menu-list
+                            li.pure-menu-item
+                                a.pure-menu-link(href='#') About
+                            li.pure-menu-item
+                                a.pure-menu-link(href='#') Portfolio
+                            li.pure-menu-item
+                                a.pure-menu-link(href='#') Contact
+                                
+        main#main
+            .page-header
+                .page-title                    
+                    .content
+                        h1 YMCA of Florida's First Coast
+                .content-container
+                    .left
+                        .wrapper
+                            ul.services
+                                li Services
+                                li UX
+                                li Web Design
+                                li Developer Managment
+                            ul.agency
+                                li Agency
+                                li Brown Dog Creative
+                            ul.year
+                                li Year
+                                li 2013
+                    .right
+                        .wrapper
+                            p YMCA of Florida’s First Coast is an inclusive organization of men, women and children with a focus on youth development, healthy living, and social responsibility. Their previous website had a cluttered feeling as new features were being added without a comprehensive approach. Through an extensive site architecture overhaul, the clutter was cut and a clear information hierarchy emerged. The new mobile-friendly, responsive website design combines this revised hierarchy with adherence to the national brand guidelines.
+            .page-content
+                .device
+                    img.pure-img(src='/assets/images/watermelon-me.png')
+                .screenshots.pure-g.layout
+                    .homepage-desktop              
+                        img.pure-img(src='/assets/images/watermelon-me.png')
+                    .homepage-mobile
+                        img.pure-img(src='/assets/images/watermelon-me.png')
+                                
+        #pre-footer
+            .content-container
+                a.more(href='https://www.behance.net/madelynntuttle') See More Projects on Behance
+                    
+        include ../_includes/_footer.pug
