@@ -69,6 +69,20 @@ a.more {
     }
 }
 
+a.visit {
+    font-family: $main-font;
+    font-weight: $main-font-bold;
+    color: $w;
+    text-transform: uppercase;
+    margin: 0 .25rem;
+    letter-spacing: .5px;
+    display: inline-block;
+    
+    &:hover, &:active {
+        color: $accent;
+    }
+}
+
 /* Circle img with black moving background */
 .circle-container {
     border-radius: 50%;

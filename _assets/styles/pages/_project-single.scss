@@ -1,7 +1,13 @@
 .project-single {
-    
     .page-header {
         .content-container {
+            &:after {
+                content: " ";
+                visibility: hidden;
+                display: block;
+                height: 0;
+                clear: both;
+            }
             
             .left {
                 
@@ -112,7 +118,7 @@
                     clip-path: polygon(0% 0%, 100% 11%, 100% 100%, 0% 90%);
 
                     p {
-                        padding: ($base-space*3) $base-space ($base-space*3);
+                        padding: ($base-space*3) $base-space ($base-space*4);
                     }
                 }
             }
@@ -153,5 +159,24 @@
             }
 
         }
-    }    
+    }
+    
+     .abc {
+        .page-header .page-title .content {
+            max-width: 75%;
+            margin: 0;
+        }
+    }
+}
+
+/* ----------------------------------------------
+** ----- Desktop and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 64em) {
+    .abc {
+        .page-header .page-title .content {
+            max-width: 92rem;
+            margin: 0 auto;
+        }
+    }
 }
