@@ -1,8 +1,8 @@
 .project-single {
     
     .page-header {
-    
         .content-container {
+            
             .left {
                 
                 /* clipped shape */
@@ -66,14 +66,92 @@
 
 
     .page-content {
+        position: relative;
+        top: 2rem;
+        max-width: 94rem;
+        margin: 0 auto;
+        
         .device {
-            margin: 2rem;
+            margin: ($base-space*2) $base-space;
+            text-align: center;
+        
+            img {
+                margin: 0 auto;
+            }
         }
         
         .screenshots {
             background: $light-gray;
             padding-bottom: $base-space*6;
         }
+    }   
 }
-    
+
+/* ----------------------------------------------
+** ----- Tablet and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 48em) {
+    .projects {    
+        .page-header {
+            .content-container {    
+                .left {
+                    margin-top: -6rem;
+                    
+                    -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 85%);
+                    clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 85%);
+                    
+                    .wrapper {
+                        padding: ($base-space*4.375) $base-space ($base-space*2);
+                    }
+                }
+
+                .right {
+                    margin-top: -3.75rem;
+                    
+                    -webkit-clip-path: polygon(0% 0%, 100% 11%, 100% 90%, 0% 100%);
+                    clip-path: polygon(0% 0%, 100% 11%, 100% 100%, 0% 90%);
+
+                    p {
+                        padding: ($base-space*3) $base-space ($base-space*3);
+                    }
+                }
+            }
+        }
+    }
+
+    .projects .page-content {
+        .projects-list {
+            background: $light-gray;
+            background: -webkit-linear-gradient($w, $light-gray); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient($w, $light-gray); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient($w, $light-gray); /* For Firefox 3.6 to 15 */
+            background: linear-gradient($w, $light-gray); /* Standard syntax */
+            
+            
+            padding-top: $base-space*6;
+            padding-bottom: $base-space*6;
+            margin-top: -($base-space*4);
+            text-align: center;
+
+            .projects-single {
+                &.middle {
+                    .text {
+                        float: right;
+                    }
+                }
+                .text {
+                    text-align: left;
+                    & * {
+                        margin-left: ($base-space);
+                        margin-right: ($base-space*2);
+                    }
+                }
+                
+                .img * {
+                    margin-right: ($base-space);
+                }
+            }
+
+        }
+    }    
 }
