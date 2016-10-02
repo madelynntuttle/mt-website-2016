@@ -1,0 +1,79 @@
+.project-single {
+    
+    .page-header {
+    
+        .content-container {
+            .left {
+                
+                /* clipped shape */
+                -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 93%, 0% 100%);
+                clip-path: polygon(0% 0%, 100% 7%, 100% 93%, 0% 100%);
+                
+                .wrapper {
+                    padding: ($base-space*3) $base-space ($base-space*2);
+                    display: inline-block;
+                    
+                    &:after {
+                        content: " ";
+                        clear: both;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        font-weight: normal;
+                        text-transform: none;
+                        margin-bottom: 2.75rem;
+
+                        li:first-child {
+                            font-weight: $main-font-bold;
+                            text-transform: uppercase;
+                        }
+                        
+                        li {
+                            margin-bottom: $base-space/2;
+                            line-height: 1.25;
+                        }
+
+                        &.services {
+                            width: 50%;
+                            float: left;
+                        }
+
+                        &.agency, &.year {
+                            width: 45%;
+                            float: right;
+                            
+                        }
+                    }
+                }
+            }
+            
+            .right {
+                margin-top: -1.5rem;
+                
+                /* clipped shape */
+                -webkit-clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 95%);
+                clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 95%);
+                
+                p {
+                    padding: ($base-space*3) ($base-space) ($base-space*4)
+                }
+            }
+        }
+    }    
+
+
+    .page-content {
+        .device {
+            margin: 2rem;
+        }
+        
+        .screenshots {
+            background: $light-gray;
+            padding-bottom: $base-space*6;
+        }
+}
+    
+}
