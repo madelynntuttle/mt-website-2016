@@ -128,11 +128,14 @@
                     float: left;
 
                     /* clipped shape */
-                    -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
-                    clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+                    //-webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+                    //clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+                    
+                    -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 85%);
+                    clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 85%);
 
                     p {
-                        padding: ($base-space*4) $base-space ($base-space*4);
+                        padding: ($base-space*4) $base-space ($base-space*6);
                     }
                 }
 
@@ -144,8 +147,11 @@
                     float: right;
 
                     /* clipped shape */
-                    -webkit-clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 95%);
-                    clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 95%);
+                    //-webkit-clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 95%);
+                    //clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 95%);
+                    
+                    -webkit-clip-path: polygon(0% 0%, 100% 12%, 100% 90%, 0% 100%);
+                    clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 90%);
 
                     p {
                         padding: ($base-space*3) $base-space ($base-space*3);
@@ -218,16 +224,20 @@
                     margin-top: -4.5rem;
                     width: 32%;
                     /* clipped shape */
-                    -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
-                    clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+                    -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 75%);
+                    clip-path: polygon(0% 0%, 100% 7%, 100% 100%, 0% 75%);
+                    
+                    p {
+                        padding-bottom: 10rem;
+                    }
                 }
 
                 .right {
-                    margin-top: -3.25rem;
+                    margin-top: -3.125rem;
                     width: 66%;
 
                     /* clipped shape */
-                    -webkit-clip-path: polygon(0% 0%, 100% 13%, 100% 100%, 0% 90%);
+                    -webkit-clip-path: polygon(0% 0%, 100% 13%, 100% 90%, 0% 100%);
                     clip-path: polygon(0% 0%, 100% 13%, 100% 100%, 0% 90%);
                 }
             }
