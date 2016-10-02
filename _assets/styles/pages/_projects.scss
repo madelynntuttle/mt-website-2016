@@ -1,0 +1,128 @@
+/* @-moz-document url-prefix() { 
+  .selector {
+     color:lime;
+  }
+}
+*/
+
+.projects .page-header {
+    position: static;
+    margin-bottom: 0;
+    
+    /* Page title */
+    .page-title {
+        background: $m;
+        margin-bottom: 1rem;
+        
+        /* clipped shape */
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+        min-height: 18rem;
+        width: 100%;
+    
+        .content {
+            max-width: 92rem;
+            margin: 0 auto;
+        }    
+    }
+    
+    .content-container {
+        position: static;
+        max-width: 92rem;
+        margin: 0 auto;
+
+        div {
+            background: transparent;
+            margin: 0;
+        }
+        
+        .left {
+            background: $y;
+            margin-top: -2rem;
+            margin-bottom: 1rem;
+            min-height: 10rem;
+            width: 100%;
+            font-weight: $main-font-bold;
+            text-transform: uppercase;
+            
+            /* clipped shape */
+            -webkit-clip-path: polygon(0% 0%, 100% 15%, 100% 90%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 15%, 100% 90%, 0% 100%);
+            
+            p {
+                padding: ($base-space*2) $base-space;
+                margin: 0;
+            }
+        }
+        
+        .right {
+            background: $c;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+            min-height: 10rem;
+            width: 100%;
+            
+            /* clipped shape */
+            -webkit-clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 90%);
+            clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 90%);
+            
+            p {
+                padding: ($base-space*2) $base-space ($base-space*3);
+                margin: 0;
+            }
+        }
+    }
+}
+
+.projects .page-content {
+    .projects-list {
+        background: $light-gray;
+        padding-top: $base-space*6;
+        padding-bottom: $base-space*6;
+        margin-top: -($base-space*4);
+        text-align: center;
+
+        .projects-single {
+            margin-bottom: $base-space*2;
+        
+            .mobile {
+                width: 90%;
+            }
+            
+            h2 {
+                color: $m;
+            }
+        }
+    
+    }
+}
+
+/* ----------------------------------------------
+** ----- Tablet and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 48em) {
+    .projects {    
+        .page-title h1 {
+            font-size: 7.2rem;
+            margin: 0 0 0 16rem;
+            padding: 8rem 0 6rem;
+        }
+
+        .page-header .content-container {    
+            div {
+                //margin: 0;
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------
+** ----- Desktop and Up Styles ----- 
+** ----------------------------------------------*/
+@media screen and (min-width: 64em) {
+    .projects {
+        .page-header .content-container {    
+            
+            }
+        }
+}
