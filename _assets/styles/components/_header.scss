@@ -90,7 +90,7 @@
     color: $k;
     padding: .625em 1em;
     
-    &:hover, &:active {
+    &:hover, &:active, &.pure-menu-selected {
         color: $accent;
     }
 }
