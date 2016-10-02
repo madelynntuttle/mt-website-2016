@@ -97,7 +97,7 @@
 ** ----- Tablet and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
-    .projects {    
+    .project-single {    
         .page-header {
             .content-container {    
                 .left {
@@ -125,7 +125,7 @@
         }
     }
 
-    .projects .page-content {
+    .project-single .page-content {
         .projects-list {
             background: $light-gray;
             background: -webkit-linear-gradient($w, $light-gray); /* For Safari 5.1 to 6.0 */
@@ -173,10 +173,15 @@
 ** ----- Desktop and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 64em) {
-    .abc {
+    .abc, .cepc {
         .page-header .page-title .content {
             max-width: 92rem;
             margin: 0 auto;
+        }
+        
+        .page-header .content-container .left {
+            -webkit-clip-path: polygon(0% 2%, 100% 7%, 100% 100%, 0% 85%);
+            clip-path: polygon(0% 2%, 100% 7%, 100% 100%, 0% 85%);
         }
     }
 }
