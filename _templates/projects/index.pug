@@ -1,0 +1,63 @@
+doctype html
+html
+    include ../_includes/_head.pug
+    body.projects    
+        header#header
+            #menu.pure-g.layout
+                #branding-outer.pure-u-1.pure-u-md-1-6
+                    #branding.pure-menu
+                        a.pure-menu-heading.custom-brand(href='#')
+                            img.pure-img(src='/assets/images/mt-logo-2016.png')
+                        a#toggle.custom-toggle(href='#')
+                            s.bar
+                            s.bar
+                .pure-u-1.pure-u-md-5-6
+                    .pure-menu.pure-menu-horizontal.custom-can-transform
+                        ul.pure-menu-list
+                            li.pure-menu-item
+                                a.pure-menu-link(href='#') About
+                            li.pure-menu-item
+                                a.pure-menu-link.pure-menu-selected(href='#') Portfolio
+                            li.pure-menu-item
+                                a.pure-menu-link(href='#') Contact
+                                
+        main#main
+            .page-header
+                .page-title                    
+                    .content
+                        h1 Selected Projects
+                .content-container
+                    .left
+                        p Bringing the pieces together
+                    .right
+                        p In my 7 years of experience, I’ve worked with many different types of clients—from large, non-profits like the YMCA to small, local businesses like Studio Mutter. Yet my goal is always the same: create beautiful, purposful web solutions uniquly crafted for each client.
+                     
+            .page-content
+                .projects-list.pure-g.layout
+                    .projects-single
+                        .pure-u-1.pure-u-md-7-12.text
+                            h2 YMCA of Florida's First Coast
+                            p UX &ndash; Web Design &ndash; Developer Management
+                        .pure-u-1.pure-u-md-5-12.img    
+                            .circle-container
+                                img.circle.pure-img(src='/assets/images/watermelon-me.png')
+                    .projects-single
+                        .pure-u-1.pure-u-md-7-12.text
+                            h2 Christ Episcopal Church
+                            p UX &ndash; Web Design &ndash; Front-End &ndash; Client Training
+                        .pure-u-1.pure-u-md-5-12.img    
+                            .circle-container
+                                img.circle.pure-img(src='/assets/images/watermelon-me.png')
+                    .projects-single
+                        .pure-u-1.pure-u-md-7-12.text
+                            h2 ABC English School
+                            p UX &ndash; Web Design &ndash; Front-End &ndash; Client Training &ndash; Strategy
+                        .pure-u-1.pure-u-md-5-12.img    
+                            .circle-container
+                                img.circle.pure-img(src='/assets/images/watermelon-me.png')            
+                                
+        #pre-footer
+            .content-container
+                a.more(href='https://www.behance.net/madelynntuttle') See More Projects on Behance
+                    
+        include ../_includes/_footer.pug
