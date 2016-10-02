@@ -38,7 +38,7 @@
         div {
             background: transparent;
             text-align: center;
-            //margin: 0;
+            margin: $base-space 0;
         }
         
         #its-me {
@@ -102,17 +102,29 @@
 
         .page-header .content-container {    
             div {
-                margin: 0;
+                //margin: 0;
             }
 
+            .tablet {
+                display: inline-block;
+            }
+            
             .right-brain {
                 width: 50%;
                 float: right;
+                
+                img {
+                    max-width: 80%;
+                }
             }
 
             .left-brain {
                 width: 50%;
                 float: left;
+                
+                img {
+                    max-width: 70%;
+                }
             }
             
             #its-me {
@@ -134,6 +146,27 @@
 ** ----------------------------------------------*/
 @media screen and (min-width: 64em) {
     .about {
+        .page-header .content-container {    
+            
+            .right-brain {
+                width: 50%;
+                float: right;
+                
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .left-brain {
+                width: 50%;
+                float: left;
+                
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        
         .my-info {
             padding-top: 3rem;
 
