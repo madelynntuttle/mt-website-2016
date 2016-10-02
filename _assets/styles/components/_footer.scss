@@ -39,6 +39,7 @@
     p {
         margin: 0;
         display: inline;
+        margin-left: -1rem;
     }
     
     span {
@@ -67,6 +68,10 @@
     }
     
     #footer {
+        p {
+            margin-left: 0;
+        }
+        
         img {
             padding: 0 3rem;
         }        

@@ -2,6 +2,10 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    background: $w;
+}
+
 body, .pure-g [class*="pure-u"] {
     margin: 0;
     font-family: $main-font;
@@ -87,7 +91,7 @@ a.more {
     }
     
     .tablet {
-        display: block;
+        display: inline-block;
     }
     
     .page-title h1 {

@@ -28,8 +28,6 @@
     
     .content-container {
         position: static;
-        max-width: 92rem;
-        margin: 0 auto;
 
         div {
             background: transparent;
@@ -46,12 +44,14 @@
             text-transform: uppercase;
             
             /* clipped shape */
-            -webkit-clip-path: polygon(0% 0%, 100% 15%, 100% 90%, 0% 100%);
-            clip-path: polygon(0% 0%, 100% 15%, 100% 90%, 0% 100%);
+            -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 90%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 20%, 100% 90%, 0% 100%);
             
             p {
                 padding: ($base-space*2) $base-space;
                 margin: 0;
+                font-size: 1.4rem;
+                line-height: 1.25;
             }
         }
         
@@ -102,18 +102,95 @@
 ** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
     .projects {    
-        .page-title h1 {
-            font-size: 7.2rem;
-            margin: 0 0 0 16rem;
-            padding: 8rem 0 6rem;
-        }
+        .page-header {
+            .page-title {
+                margin-bottom: 1rem;
+                
+                /* clipped shape */
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+                min-height: 18rem;
+                width: 100%;
 
-        .page-header .content-container {    
-            div {
-                //margin: 0;
+                h1 {
+                    font-size: 7.2rem;
+                    margin: 0 0 0 16rem;
+                    padding: ($base-space*4) $base-space ($base-space*4);
+                } 
+            }
+
+            .content-container {    
+
+                .left {
+                    margin-top: -4rem;
+                    margin-bottom: 1rem;
+                    width: 32%;
+                    float: left;
+
+                    /* clipped shape */
+                    -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+                    clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+
+                    p {
+                        padding: ($base-space*4) $base-space ($base-space*4);
+                    }
+                }
+
+                .right {
+                    margin-top: -2.5rem;
+                    margin-bottom: 1rem;
+                    min-height: 10rem;
+                    width: 66%;
+                    float: right;
+
+                    /* clipped shape */
+                    -webkit-clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 95%);
+                    clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 95%);
+
+                    p {
+                        padding: ($base-space*3) $base-space ($base-space*3);
+                        margin: 0;
+                    }
+                }
             }
         }
     }
+
+    .projects .page-content {
+        .projects-list {
+            background: $light-gray;
+            background: -webkit-linear-gradient($w, $light-gray); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient($w, $light-gray); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient($w, $light-gray); /* For Firefox 3.6 to 15 */
+            background: linear-gradient($w, $light-gray); /* Standard syntax */
+            
+            
+            padding-top: $base-space*6;
+            padding-bottom: $base-space*6;
+            margin-top: -($base-space*4);
+            text-align: center;
+
+            .projects-single {
+                &.middle {
+                    .text {
+                        float: right;
+                    }
+                }
+                .text {
+                    text-align: left;
+                    & * {
+                        margin-left: ($base-space);
+                        margin-right: ($base-space*2);
+                    }
+                }
+                
+                .img * {
+                    margin-right: ($base-space);
+                }
+            }
+
+        }
+    }    
 }
 
 /* ----------------------------------------------
@@ -121,8 +198,61 @@
 ** ----------------------------------------------*/
 @media screen and (min-width: 64em) {
     .projects {
-        .page-header .content-container {    
+        .page-header {
+            .page-title {
+                /* clipped shape */
+                -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%);
+            
+                h1 {
+                    padding-bottom: 12rem;
+                }
             
             }
+
+            .content-container {    
+                max-width: 92rem;
+                margin: 0 auto;
+                
+                .left {
+                    margin-top: -4.5rem;
+                    width: 32%;
+                    /* clipped shape */
+                    -webkit-clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+                    clip-path: polygon(0% 0%, 100% 7%, 100% 95%, 0% 100%);
+                }
+
+                .right {
+                    margin-top: -3.25rem;
+                    width: 66%;
+
+                    /* clipped shape */
+                    -webkit-clip-path: polygon(0% 0%, 100% 13%, 100% 100%, 0% 90%);
+                    clip-path: polygon(0% 0%, 100% 13%, 100% 100%, 0% 90%);
+                }
+            }
         }
+    
+        .projects .page-content {
+            .projects-list {
+                .projects-single {
+                    max-width: 78rem;
+                    width: 100%;
+
+                    .text * {
+                        margin-left: ($base-space*2);
+                    }
+
+                    .img * {
+                        margin-right: ($base-space*2);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .layout > div {
+        padding: 0 6rem;   
+    }
 }
