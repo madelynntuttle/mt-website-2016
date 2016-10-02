@@ -1,13 +1,13 @@
 doctype html
-html
+html(lang="en")
     include ../_includes/_head.pug
     body.projects.project-single.cepc    
         header#header
             #menu.pure-g.layout
                 #branding-outer.pure-u-1.pure-u-md-1-6
                     #branding.pure-menu
-                        a.pure-menu-heading.custom-brand(href='#')
-                            img.pure-img(src='/assets/images/mt-logo-2016.png')
+                        a.pure-menu-heading.custom-brand(href='/')
+                            img.pure-img(src='/assets/images/mt-logo-2016.png' alt='Logo Image for M Tuttle')
                         a#toggle.custom-toggle(href='#')
                             s.bar
                             s.bar
@@ -15,11 +15,11 @@ html
                     .pure-menu.pure-menu-horizontal.custom-can-transform
                         ul.pure-menu-list
                             li.pure-menu-item
-                                a.pure-menu-link(href='#') About
+                                a.pure-menu-link(href='/about.html') About
                             li.pure-menu-item
-                                a.pure-menu-link(href='#') Portfolio
+                                a.pure-menu-link(href='/projects/') Work
                             li.pure-menu-item
-                                a.pure-menu-link(href='#') Contact
+                                a.pure-menu-link(href='/#contact') Contact
                                 
         main#main
             .page-header
@@ -46,16 +46,16 @@ html
                             p Christ Episcopal Church has been a mainstay of Christian faith throughout Northeast Florida for over 75 years. Their three campuses participate in joyful worship and provide service and educational opportunities to the community. Their previous website was complicated to update and users had difficultly finding the information they needed. Through an extensive site architecture overhaul and a new CMS these issue were resolved. The new website’s look and feel and usability welcome new and previous members with easy-to-access information. #[a.visit(href='http://www.christepiscopalchurch.org/' target='_blank') Visit Website]
             .page-content
                 .device
-                    img.pure-img(src='/assets/images/device-cepc.png')
+                    img.pure-img(src='/assets/images/device-cepc.png' alt='CEPC on devices image')
                 .screenshots.pure-g.layout
                     .homepage-desktop              
-                        img.pure-img(src='/assets/images/homepage-desktop-cepc.png')
+                        img.pure-img(src='/assets/images/homepage-desktop-cepc.png' alt='Desktop CEPC image')
                     //
                         .homepage-mobile
                             img.pure-img(src='/assets/images/#')
                                 
         #pre-footer
             .content-container
-                a.more(href='https://www.behance.net/madelynntuttle') See More Projects on Behance
+                a.more(href='https://www.behance.net/madelynntuttle') See More Work on Behance
                     
         include ../_includes/_footer.pug

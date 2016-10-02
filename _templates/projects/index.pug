@@ -1,13 +1,13 @@
 doctype html
-html
+html(lang="en")
     include ../_includes/_head.pug
     body.projects    
         header#header
             #menu.pure-g.layout
                 #branding-outer.pure-u-1.pure-u-md-1-6
                     #branding.pure-menu
-                        a.pure-menu-heading.custom-brand(href='#')
-                            img.pure-img(src='/assets/images/mt-logo-2016.png')
+                        a.pure-menu-heading.custom-brand(href='/')
+                            img.pure-img(src='/assets/images/mt-logo-2016.png' alt='Logo Image for M Tuttle')
                         a#toggle.custom-toggle(href='#')
                             s.bar
                             s.bar
@@ -15,11 +15,11 @@ html
                     .pure-menu.pure-menu-horizontal.custom-can-transform
                         ul.pure-menu-list
                             li.pure-menu-item
-                                a.pure-menu-link(href='#') About
+                                a.pure-menu-link(href='/about.html') About
                             li.pure-menu-item
-                                a.pure-menu-link.pure-menu-selected(href='#') Portfolio
+                                a.pure-menu-link.pure-menu-selected(href='#') Work
                             li.pure-menu-item
-                                a.pure-menu-link(href='#') Contact
+                                a.pure-menu-link(href='/#contact') Contact
                                 
         main#main
             .page-header
@@ -37,33 +37,33 @@ html
                     .projects-single
                         .pure-u-1.mobile
                             .circle-container
-                                img.circle.pure-img(src='/assets/images/ymca-thumb.png')
+                                a(href='/projects/ymca.html'): img.circle.pure-img(src='/assets/images/ymca-thumb.png' alt='YMCA thumbnail image')
                         .pure-u-1.pure-u-md-7-12.text
                             h2 YMCA of Florida's First Coast
                             p UX &ndash; Web Design &ndash; Developer Management
                         .pure-u-1.pure-u-md-5-12.img.tablet    
                             .circle-container
-                                img.circle.pure-img(src='/assets/images/ymca-thumb.png')
+                                a(href='/projects/ymca.html'): img.circle.pure-img(src='/assets/images/ymca-thumb.png' alt='YMCA thumbnail image')
                     .projects-single.middle
                         .pure-u-1.mobile
                             .circle-container
-                                img.circle.pure-img(src='/assets/images/cepc-thumb.png')
+                                a(href='/projects/christ-episcopal.html'): img.circle.pure-img(src='/assets/images/cepc-thumb.png' alt='CEPC thumbnail image')
                         .pure-u-1.pure-u-md-7-12.text
                             h2 Christ Episcopal Church
                             p UX &ndash; Web Design &ndash; Front-End &ndash; Client Training
                         .pure-u-1.pure-u-md-5-12.img.tablet    
                             .circle-container
-                                img.circle.pure-img(src='/assets/images/cepc-thumb.png')
+                                a(href='/projects/christ-episcopal.html'): img.circle.pure-img(src='/assets/images/cepc-thumb.png' alt='CEPC thumbnail image')
                     .projects-single
                         .pure-u-1.mobile
                             .circle-container
-                                img.circle.pure-img(src='/assets/images/abc-thumb.png')
+                                a(href='/projects/abc-english-school.html'): img.circle.pure-img(src='/assets/images/abc-thumb.png' alt='ABC thumbnail image')
                         .pure-u-1.pure-u-md-7-12.text
                             h2 ABC English School
                             p UX &ndash; Web Design &ndash; Front-End &ndash; Client Training &ndash; Strategy
                         .pure-u-1.pure-u-md-5-12.img.tablet    
                             .circle-container
-                                img.circle.pure-img(src='/assets/images/abc-thumb.png')            
+                                a(href='/projects/abc-english-school.html'): img.circle.pure-img(src='/assets/images/abc-thumb.png' alt='ABC thumbnail image')            
                                 
         #pre-footer
             .content-container

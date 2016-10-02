@@ -1,13 +1,13 @@
 doctype html
-html
+html(lang="en")
     include _includes/_head.pug
     body.about    
         header#header
             #menu.pure-g.layout
                 #branding-outer.pure-u-1.pure-u-md-1-6
                     #branding.pure-menu
-                        a.pure-menu-heading.custom-brand(href='#')
-                            img.pure-img(src='/assets/images/mt-logo-2016.png')
+                        a.pure-menu-heading.custom-brand(href='/')
+                            img.pure-img(src='/assets/images/mt-logo-2016.png' alt='Logo Image for M Tuttle')
                         a#toggle.custom-toggle(href='#')
                             s.bar
                             s.bar
@@ -17,9 +17,9 @@ html
                             li.pure-menu-item
                                 a.pure-menu-link.pure-menu-selected(href='#') About
                             li.pure-menu-item
-                                a.pure-menu-link(href='#') Portfolio
+                                a.pure-menu-link(href='/projects/') Work
                             li.pure-menu-item
-                                a.pure-menu-link(href='#') Contact
+                                a.pure-menu-link(href='/#contact') Contact
                                 
         main#main
             .page-header
@@ -28,16 +28,16 @@ html
                         h1 About Me!
                 .content-container
                     .right-brain
-                        img.mobile(src='/assets/images/right-brain.png')
-                        img.tablet(src='/assets/images/right-brain-tablet.png')
+                        img.mobile(src='/assets/images/right-brain.png' alt='Right brain trains image')
+                        img.tablet(src='/assets/images/right-brain-tablet.png' alt='Right brain trains image')
                     .left-brain
-                        img.mobile(src='/assets/images/left-brain.png')
-                        img.tablet(src='/assets/images/left-brain-tablet.png')
+                        img.mobile(src='/assets/images/left-brain.png' alt='Left brain trains image')
+                        img.tablet(src='/assets/images/left-brain-tablet.png' alt='Left brain trains image')
                     #its-me
                         .look-around
                             #me-container.img-cache
                                 .center
-                                img#me.pure-img(src='/assets/images/look-around-tiny.png')
+                                img#me.pure-img(src='/assets/images/look-around-tiny.png' alt='M Tuttle looks around image')
             .page-content
                 .my-info.pure-g.layout
                     .pure-u-1.info-single

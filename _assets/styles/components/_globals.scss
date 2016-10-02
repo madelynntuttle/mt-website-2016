@@ -91,6 +91,11 @@ a.visit {
     padding: 1rem;
 }
 
+.circle-container a {
+    display: block;
+    margin: 0 !important;
+}
+
 .circle {
     border-radius: 50%;
     width: 100%;
