@@ -60,7 +60,7 @@ a.more {
     letter-spacing: 1px;
     display: inline-block;
     
-    &:hover {
+    &:hover, &:active {
         color: $accent;
     }
 }
