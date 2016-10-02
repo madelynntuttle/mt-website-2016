@@ -29,6 +29,7 @@
         }
     }
     
+    /* Look Around Image Area */
     .content-container {
         position: static;
         max-width: 92rem;
@@ -40,9 +41,40 @@
             //margin: 0;
         }
         
-        .look-around {
-            max-width: 40rem;
+        #its-me {
+            position: relative;
+            z-index: 20;
+            clear: both;
+            height: 202px;
+            width: 280px;
             margin: 0 auto;
+
+            .look-around {
+                position: absolute;
+                height: 202px;
+                width: 280px;
+                overflow: hidden;
+                bottom: 0;
+                margin: 0;
+                
+                .img-cache {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    margin: 0;
+                
+                    img {
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                    }                    
+                }
+            
+            }    
         }
     }
 }
@@ -62,28 +94,37 @@
 ** ----- Tablet and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
-    .page-title h1 {
-        font-size: 7.2rem;
-        margin: 0 0 0 16rem;
-        padding: 8rem 0 6rem;
-    }
-    .page-header .content-container {    
-        div {
-            margin: 0;
-        }
-        
-        .right-brain {
-            width: 50%;
-            float: right;
+    .about {    
+        .page-title h1 {
+            font-size: 7.2rem;
+            margin: 0 0 0 16rem;
+            padding: 8rem 0 6rem;
         }
 
-        .left-brain {
-            width: 50%;
-            float: left;
-        }
+        .page-header .content-container {    
+            div {
+                margin: 0;
+            }
 
-        .look-around {
-            clear: both;
+            .right-brain {
+                width: 50%;
+                float: right;
+            }
+
+            .left-brain {
+                width: 50%;
+                float: left;
+            }
+
+            #its-me {
+                height: 300px;
+                width: 415px;
+
+                .look-around {
+                    height: 300px;
+                    width: 415px;
+                }    
+            }
         }
     }
 }
