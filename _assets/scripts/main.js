@@ -85,7 +85,7 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
         $("#typed").typed({
         strings: ["purposeful", "focused", "thoughtful"],
         typeSpeed: 125,
-        startDelay: 2000,
+        startDelay: 1000,
         backSpeed: 100,
         backDelay: 1000,
         loop: false
