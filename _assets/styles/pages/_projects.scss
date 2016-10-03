@@ -205,6 +205,10 @@
                         margin-right: ($base-space*2);
                     }
                     
+                    a {
+                        margin-left: 0;
+                    }
+                    
                     p {
                         width: 75%;
                     }
@@ -273,10 +277,6 @@
 
                     .text * {
                         margin-left: ($base-space*2);
-                    }
-                    
-                    .text a {
-                        margin-left: 0;
                     }
 
                     .img * {
