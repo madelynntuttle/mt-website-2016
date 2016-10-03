@@ -135,6 +135,12 @@
                 .look-around {
                     height: 295px;
                     width: 415px;
+                    
+                    .img-cache {
+                        img {
+                            bottom: 0;    
+                        }
+                    }
                 }    
             }
         }
