@@ -1,5 +1,5 @@
 /* Typography */
-.index { 
+.home { 
     .page-content {
         h2 {
             font-family: $accent-font;
@@ -130,13 +130,38 @@
             }
         }
     }
+
+
+    /* Typed.js styles */
+    .typed-cursor{
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    
 }
 
 /* ----------------------------------------------
 ** ----- Tablet and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 48em) {
-    .index {
+    .home {
     
         /* Shapes page-header */
         .page-header {
@@ -146,8 +171,8 @@
                 top: 8rem;
 
                 div {
-                    font-size: 4rem;
-                    line-height: 5.5rem;
+                    font-size: 3.6rem;
+                    line-height: 5rem;
                     max-width: 62rem;
                     margin: $base-space auto;
 
@@ -217,7 +242,7 @@
 ** ----- Desktop and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 64em) {
-    .index{
+    .home{
         .page-header .content-container {
             top: 22%;
             left: 0;
@@ -225,6 +250,8 @@
 
             div {
                 width: auto;
+                font-size: 4rem;
+                line-height: 5.5rem;
 
                 p {
                     margin: 4rem;

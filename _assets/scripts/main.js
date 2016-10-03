@@ -38,11 +38,11 @@ document.getElementById('toggle').addEventListener('click', function (e) {
 window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
 })(this, this.document);
 
-// Look Around
-(function ($){
+
+(function ($) {
     var $body = $('body');
     
-    // About page
+    // About page - Look Around
     if ($body.hasClass('about')) {
         var steps = 12;
         var stepDivisor = 360 / steps;
@@ -80,11 +80,15 @@ window.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
         
     }
     
-    
+    // Homepage - replace text
     if ($body.hasClass('home')) {
-        $(".element").typed({
-        strings: ["First sentence.", "Second sentence."],
-        typeSpeed: 0
+        $("#typed").typed({
+        strings: ["purposeful", "focused", "thoughtful"],
+        typeSpeed: 125,
+        startDelay: 2000,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: false
       });
     }
     

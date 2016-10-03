@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
     include _includes/_head.pug
-    body.index    
+    body.home    
         header#header
             #menu.pure-g.layout
                 #branding-outer.pure-u-1.pure-u-md-1-6
@@ -25,7 +25,10 @@ html(lang="en")
             .page-header
                 .content-container.pure-g.layout
                     .pure-u-1.pure-u-md-2-3
-                        p Bringing the pieces together through [focused] design.
+                        p
+                            | Bringing the pieces together through<br>[
+                            span#typed
+                            | ] design.
                 #shapes-container
                     img.shapes(src='/assets/images/shapes.png' alt='Colorful shapes image')
                     
