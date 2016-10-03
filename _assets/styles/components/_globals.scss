@@ -83,6 +83,37 @@ a.visit {
     }
 }
 
+/* Featured img link transform on hover */
+a.featured {
+    img {
+        margin: 0 auto;                        
+        -ms-transition: -ms-transform 0.5s;
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+        //padding: 1rem 0;
+    }
+
+    &:hover img, &:active img {
+        -ms-transform: rotate(3deg) scale(1.05,1.05);
+        -webkit-transform: rotate(3deg) scale(1.05,1.05);
+        transform: rotate(3deg) scale(1.05,1.05);
+    }
+}
+
+.middle a.featured:hover img, .middle a.featured:active img {
+    -ms-transform: rotate(-3deg) scale(1.05,1.05);
+    -webkit-transform: rotate(-3deg) scale(1.05,1.05);
+    transform: rotate(-3deg) scale(1.05,1.05);
+}
+
+.projects a.featured, .projects .middle a.featured {
+    &:hover img, &:active img {
+        -ms-transform: rotate(3deg) scale(1.08,1.08);
+        -webkit-transform: rotate(3deg) scale(1.08,1.08);
+        transform: rotate(3deg) scale(1.08,1.08);
+    }
+}
+
 /* Circle img with black moving background */
 .circle-container {
     border-radius: 50%;

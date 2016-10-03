@@ -1,3 +1,4 @@
+/* Mozilla only selector to fix shapes */
 /* @-moz-document url-prefix() { 
   .selector {
      color:lime;
@@ -91,6 +92,14 @@
             
             h2 {
                 color: $m;
+                
+                a {
+                    color: $m;
+                    
+                    &:hover, &:active {
+                        color: $accent;
+                    }
+                }
             }
         }
     
@@ -264,6 +273,10 @@
 
                     .text * {
                         margin-left: ($base-space*2);
+                    }
+                    
+                    .text a {
+                        margin-left: 0;
                     }
 
                     .img * {
