@@ -181,18 +181,30 @@
                     .text {
                         float: right;
                     }
+                    
+                    .img .circle-container {
+                        margin-left: ($base-space);
+                        //margin-right: 0;
+                    }
                 }
                 .text {
                     text-align: left;
+                    margin-top: ($base-space*2);
+                    
                     & * {
                         margin-left: ($base-space);
                         margin-right: ($base-space*2);
+                    }
+                    
+                    p {
+                        width: 75%;
                     }
                 }
                 
                 .img * {
                     margin-right: ($base-space);
                 }
+                
             }
 
         }
@@ -243,11 +255,12 @@
             }
         }
     
-        .projects .page-content {
+        .page-content {
             .projects-list {
                 .projects-single {
-                    max-width: 78rem;
+                    max-width: 86rem;
                     width: 100%;
+                    margin: 0 auto;
 
                     .text * {
                         margin-left: ($base-space*2);
@@ -259,10 +272,5 @@
                 }
             }
         }
-    }
-
-
-    .page-content .layout > div {
-        padding: 0 6rem;   
     }
 }

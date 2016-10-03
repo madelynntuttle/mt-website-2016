@@ -155,6 +155,19 @@
 ** ----- Desktop and Up Styles ----- 
 ** ----------------------------------------------*/
 @media screen and (min-width: 64em) {
+    .project-single {
+        .page-content {
+            .layout > div {
+                padding: 0 6rem;   
+            }
+            
+            .screenshots {
+                padding-top: ($base-space*3);
+                padding-bottom: ($base-space*8);
+            }
+        }
+    }
+    
     .abc, .cepc {
         .page-header .page-title .content {
             max-width: 92rem;
